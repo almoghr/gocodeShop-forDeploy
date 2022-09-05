@@ -16,7 +16,7 @@ const Routing = () => {
   const [cart, setCart] = useState([]);
 
   const getProductsApi = async () => {
-    const productsUrl = "http://localhost:8000/api/products";
+    const productsUrl = "https://gocodeshopfullprojectdeployed.onrender.com/api/products";
     const response = await axios.get(productsUrl);
     console.log(response)
     const data = await response.data;
