@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
     "dev": "concurrently \"nodemon index.js\" \"cd client && npm start\"",
-    "render-postbuild": "cd client && npm i && npm run build"
+    "render-postbuild": "cd client && yarn install && yarn build"
 
   },
   "keywords": [],
