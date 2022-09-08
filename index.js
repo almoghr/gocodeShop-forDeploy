@@ -19,7 +19,7 @@ app.use(express.static("client/build"));
 app.use(cors());
 
 //ROUTES
-app.get("/api/products", getAllProducts);
+app.get("/api/getAll", getAllProducts);
 app.get("/api/product/:productId", getProductById);
 app.get("/api/products/:category", getAllproductsByMatchingCategory);
 app.post("/api/products", addProduct);
