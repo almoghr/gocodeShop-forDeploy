@@ -1,6 +1,6 @@
 const Product = require("../models/product");
-const { productAllowedUpdates } = require('./constants/allowedUpdates')
-const serverResponse = require('./utils/serverResponse')
+const { productAllowedUpdates } = require('../constants/allowedUpdates')
+const serverResponse = require('../utils/serverResponse')
 
 const getAllProducts = async (req, res) => {
   try {
@@ -11,18 +11,8 @@ const getAllProducts = async (req, res) => {
   }
 };
 
-const getProductById = async (reqconst getAllProducts = async (req, res) => {
-    try {
-      const allProducts = await Product.find({});
-      return serverResponse(res, 200, allProducts);
-    } catch (e) {
-      return serverResponse(res, 500, { message: "internal error occured" + e });
-    }
-  };
-  
-  const getProductById = async (req, res) => {
-    try {
-  
+const getProductById = async (req, res) => {
+  try {
     const productId = req.params.productId;
     const product = await Product.findOne({ _id: productId });
     return serverResponse(res, 200, product);
